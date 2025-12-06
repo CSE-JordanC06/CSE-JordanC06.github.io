@@ -1,23 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Resume — Jordan Chen</title>
-  <link rel="stylesheet" href="resumestyles.css">
+  <link rel="stylesheet" href="resumestyles.css" />
 </head>
+
 <body>
-  <h1>Jordan Chen — Resume</h1>
+  <main class="resume">
+    <!-- Header -->
+    <header class="resume-header" role="banner">
+      <h1 class="name">Jordan Chen</h1>
+      <p class="contact">
+        Active Secret Clearance &nbsp;|&nbsp; <a href="mailto:ChenJ24327@gmail.com">ChenJ24327@gmail.com</a> &nbsp;|&nbsp;
+        <a href="https://linkedin.com/in/jordanchen06/" target="_blank" rel="noopener">linkedin.com/in/jordanchen06/</a>
+      </p>
+      <p style="text-align:center;margin:0.5rem 0;font-size:0.95rem;color:#555;">
+        <a href="files/resume.pdf">Download PDF version</a>
+      </p>
+      <hr class="divider" />
+    </header>
 
-  <p><a href="files/CSCE Resume Fall 2025.pdf">Download PDF version</a></p>
+    <!-- EDUCATION -->
+    <section class="section">
+      <h2 class="section-title">EDUCATION</h2>
+      <p class="item-title"><strong>Bachelor of Science in Computer Information Systems</strong> <span class="muted">| Minor in Business Administration</span></p>
+      <p class="item-sub">University of South Carolina Columbia — Columbia, SC</p>
+      <p class="meta">Anticipated Spring 2029 &nbsp;|&nbsp; GPA: 3.5</p>
+    </section>
 
-  <div class="resume-container">
-    <iframe 
-      src="files/CSCE Resume Fall 2025.pdf" 
-      width="100%" 
-      height="800px"
-      style="border: none;">
-    </iframe>
-  </div>
+    <hr class="divider" />
 
+    <!-- SKILLS -->
+    <section class="section">
+      <h2 class="section-title">SKILLS</h2>
+      <ul class="bullets inline">
+        <li><strong>Programming Languages:</strong> Python, SQL, Java, HTML</li>
+        <li><strong>Operating Systems:</strong> Windows (Server 2019, 10, 11), Linux (Ubuntu, Rocky, Kali)</li>
+        <li><strong>Software:</strong> Microsoft Office Suite, Google Workspace, vSphere, VMware ESXi, Cisco Packet Tracer</li>
+        <li><strong>Knowledge:</strong> OSINT Framework, MITRE ATT&CK framework, OSI Model</li>
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section">
+      <h2 class="section-title">WORK EXPERIENCE</h2>
+
+      <p class="item-title"><strong>Intern, System Administrator</strong></p>
+      <p class="item-sub">Scientific Research Corporation — Augusta, GA &nbsp;|&nbsp; May 2025 - August 2025</p>
+      <ul class="bullets">
+        <li>Administered 60+ virtual machines across Windows, Linux, and network appliances using VMware ESXi and vCenter, optimizing system performance and ensuring stability.</li>
+        <li>Designed and secured multi-site infrastructure implementing OPNsense firewalls, dual VPN tunnels (IPsec &amp; WireGuard), and VLAN segmentation, ensuring encrypted inter-site communication and isolated network zones.</li>
+        <li>Deployed and integrated 20+ enterprise-grade services (Active Directory, DNS/DHCP, mail servers, web servers, load balancers, SIEM, FIM, Rocket.Chat, Grafana logging) to create a production-quality cyber-range environment.</li>
+        <li>Collaborated with a 5-person team to deliver a 60+ page technical report and executive presentation to U.S. Army PEO STRI leadership detailing architecture, security controls, and scalable recommendations.</li>
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ORGANIZATIONS -->
+    <section class="section">
+      <h2 class="section-title">ORGANIZATIONS</h2>
+
+      <p class="item-title"><strong>Cyber Patriots, Aiken Scholars Academy</strong> <span class="muted">AUG 2022 - MAY 2025</span></p>
+      <ul class="bullets">
+        <li>Served as President and Windows 10 Security Lead; led system hardening efforts via Group Policy, account control, and service auditing. Team earned 1st place in South Carolina’s Platinum Division and invited to PCDC.</li>
+      </ul>
+
+      <p class="item-title"><strong>OSINT Engagements, Aiken Scholars Academy</strong> <span class="muted">AUG 2021 - MAY 2023</span></p>
+      <ul class="bullets">
+        <li>Conducted OSINT investigations and red-team simulations; completed CTF challenges (picoCTF, TryHackMe, OverTheWire) performing vulnerability discovery and remediation reporting.</li>
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- OPTIONAL: Projects / Research -->
+    <section class="section">
+      <h2 class="section-title">PROJECT &amp; RESEARCH EXPERIENCE</h2>
+      <p class="item-title"><strong>Project / Research — Example</strong></p>
+      <ul class="bullets">
+        <li>Contributed to technical work using Python and related tools; describe project scope and your contributions here.</li>
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- PRINTABLE FOOTER -->
+    <footer style="margin-top:10px;text-align:center;color:#666;font-size:0.9rem;">
+      Resume generated from uploaded PDF content. Source: uploaded file. :contentReference[oaicite:1]{index=1}
+    </footer>
+  </main>
 </body>
 </html>
