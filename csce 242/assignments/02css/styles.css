@@ -59,7 +59,6 @@ a:hover {
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
 }
 
 #main-header p,
@@ -94,6 +93,6 @@ th {
     background-color: #73000a;
 }
 
-tr:nth-child(even) {
-    background-color: #f0f0f0;
+tr {
+    background-color: rgb(228, 227, 227);
 }
