@@ -1,0 +1,91 @@
+/* Structural */
+
+body {
+    margin: 0;
+    background-color: #dcd7c1;
+}
+
+#content {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+#main-header {
+    padding: 30px;
+    text-align: center;
+    background-color: #1C2541;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#main-content {
+    padding: 25px 40px;
+}
+
+#main-footer {
+    padding: 12px;
+    text-align: center;
+    background-color: #3A506B;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+/* Navigation */
+
+#main-header a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 2px solid #5BC0BE;
+    border-radius: 20px;
+}
+
+#main-content a {
+    color: #1C2541;
+    text-decoration: none;
+}
+
+#main-content a:hover {
+    color: #5BC0BE;
+    text-decoration: underline;
+}
+
+#main-content li {
+    margin: 5px;
+}
+
+
+/* Typography */
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #0B132B;
+}
+
+#main-header h1 {
+    margin: 8px 0;
+    color: #FFFFFF;
+}
+
+#main-header p {
+    width: 800px;
+    margin: 20px auto;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+#assignments, #exercises {
+    color: #1C2541;
+    border-bottom: 5px solid #5BC0BE;
+    padding-bottom: 6px;
+}
+
+#main-footer p {
+    margin: 0;
+    color: #FFFFFF;
+}
