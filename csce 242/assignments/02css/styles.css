@@ -1,0 +1,99 @@
+/* Structural */
+
+body {
+    margin: 0;
+    background-color: #f4f0ea;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a1a1a;
+}
+
+#content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+#main-header, footer {
+    padding: 28px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #73000a;
+}
+
+main {
+    padding: 25px;
+}
+#photos {
+    display: flex;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+#photos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+#photos img {
+    width: 40%;
+    height: 500px;
+    border: 3px solid #73000a;
+}
+
+/* Navigation */
+
+a {
+    color: #73000a;
+}
+
+a:hover {
+    color: #000000;
+}
+
+
+/* Typography */
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+#main-header p,
+footer p {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #73000a;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 6px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #c7c7c7;
+}
+
+th {
+    color: #ffffff;
+    background-color: #73000a;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
