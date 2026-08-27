@@ -8,14 +8,64 @@ content {
     width: 80%;
     margin: auto;
 }
+
+#main-header {
+    background-color: bisque;
+}
+
+
+
+
+#sidebar, #info {
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+#sidebar {
+    background-color: #FFFFFF;
+
+}
+
+#info {
+    background-color: blueviolet;
+}
+
+#quicklinks {
+    list-style-type: none;
+    padding: 0;
+}
+
 /* Navigation */
+
+#main-nav ul, #quicklinks {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#main-nav li {
+    background-color: darkslateblue;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+
+#main-nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: orange;
+}
+
 
 
 
 
 /* Typography */
 
-
+#main-header h1 {
+    text-align: center;
+    padding: 20px;
+}
 
 
 /* Responsive Design */
@@ -23,6 +73,11 @@ content {
 @media (min-width: 1000px) {
     .colums {
         display: flex;
+    }
+
+    #main-nav li{
+        flex: 1;
+        border: 0;
     }
     .one {
         flex: 1;
