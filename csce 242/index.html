@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CSCE 242 Portfolio Page</title>
-        <link rel="stylesheet" href="styles.css" />
+        <title>CSCE 242 Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div id="content">
             <header id="main-header">
-                <h1>CSCE 242 Portfolio Page</h1>
-                <h1>Jordan Chen</h1>
-                <p>In this course, students will learn the fundamentals of web development by building interactive websites from the ground up. They will use HTML and CSS to design and style web pages, JavaScript to add functionality and interactivity, and Node.js with server-side JavaScript to store, manage, and retrieve data from a server.</p>
-                <link><a href="https://github.com/CSE-JordanC06/CSE-JordanC06.github.io/tree/main/csce%20242" target="_blank">GitHub Repository</a></link>
+                <h1>CSCE 242 Portfolio</h1>
+                <h2>Jordan Chen</h2>
+                <p>This portfolio contains my web development assignments and projects from CSCE 242. Each page shows the HTML and CSS skills I have been practicing throughout the semester.</p>
+                <a class="github-link" href="https://github.com/CSE-JordanC06/CSE-JordanC06.github.io/tree/main/csce%20242" target="_blank">View My GitHub Repository</a>
             </header>
-            <main id="main-content"> 
-                <h2 id="assignments">Assignments</h2>
-                <ol>
-                    <li><a href="assignments/01html/index.html">First Assignment - Basic HTML</a></li>
-                    <li><a href="assignments/02css/index.html">Second Assignment - Basic CSS</a></li>
-                    <li><a href="assignments/03flex/index.html">Third Assignment - Layout with Flex</a></li>
-                </ol>    
-                <h2 id="exercises">Exercises</h2>
-                <ol>
-                    <li><a href="exercises/01html/index.html">ChinaMax101</a></li>
-                    <li><a href="exercises/02css/index.html">Pandas</a></li>
-                </ol>
+            <main id="main-content">
+                <section id="assignments">
+                    <h2>Assignments</h2>
+                    <div class="cards">
+                        <article class="card">
+                            <a href="assignments/01html/index.html">
+                                <img src="images/assignment1.png" alt="Screenshot of Assignment 1">
+                                <h3>Assignment 1: Basic HTML</h3>
+                            </a>
+                            <p>I created a webpage about the University of South Carolina women's basketball team. This assignment helped me practice using HTML elements, links, images, and a table.</p>
+                        </article>
+                        <article class="card">
+                            <a href="assignments/02css/index.html">
+                                <img src="images/assignment2.png" alt="Screenshot of Assignment 2">
+                                <h3>Assignment 2: Basic CSS</h3>
+                            </a>
+                            <p>I designed a Carolina Club Pickleball webpage and used CSS to add colors, spacing, navigation styles, and a background image.</p>
+                        </article>
+                        <article class="card">
+                            <a href="assignments/03flex/index.html">
+                                <img src="images/assignment3.png" alt="Screenshot of Assignment 3">
+                                <h3>Assignment 3: Layout with Flex</h3>
+                            </a>
+                            <p>I built a responsive New York Knicks webpage using Flexbox. The layout changes from columns on a large screen to one column on a smaller screen.</p>
+                        </article>
+                    </div>
+                </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div class="cards">
+                        <article class="card">
+                            <a href="../projects/part1/proposal.pdf" target="_blank">
+                                <img src="images/project-proposal.png" alt="Screenshot of cookbook website proposal">
+                                <h3>Project Part 1: Cookbook Website Proposal</h3>
+                            </a>
+                            <p>For my course project, I am planning a cookbook website. The proposal explains the topic, planned pages, and features I want to include in the final website.</p>
+                        </article>
+                    </div>
+                </section>
             </main>
             <footer id="main-footer">
-                <p>&copy; JordanChen</p>
+                <p>&copy; Jordan Chen - CSCE 242</p>
             </footer>
         </div>
     </body>
