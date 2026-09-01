@@ -9,13 +9,46 @@ content {
     margin: auto;
 }
 
+/* Header */
 #main-header {
     background-color: bisque;
+    position: relative;
+    padding-top:3%;
 }
 
+#logo {
+    position:absolute;
+    left:1em;
+    top:1em;
+}
+/* Hero */
+#hero {
+    position: relative;
+}
 
+#hero-description {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    font-size: 1.5em;
+}
+.hero-arrow {
+    position: absolute;
+    top: 22%;
+    font-size: 12em;
+    color: white;
+    text-decoration: none;
+}
+#hero-arrow-right {
+    right: 2%;
+}
+#hero-arrow-left {
+    left: 2%;
+}
 
-
+/*Sidebar */
 #sidebar, #info {
     padding: 20px;
     border-radius: 20px;
@@ -38,7 +71,7 @@ content {
 
 /* Navigation */
 
-#main-nav ul, #quicklinks {
+#main-nav ul, #quicklinks,#login-nav ul {
     list-style-type: none;
     padding-left: 0;
 }
@@ -51,12 +84,14 @@ content {
 
 
 
-#main-nav a {
+#main-nav a, #login-nav a {
     text-decoration: none; /* Remove underline from links */
     color: orange;
 }
 
-
+#login-nav li {
+    display: inline-block;
+}
 
 
 
