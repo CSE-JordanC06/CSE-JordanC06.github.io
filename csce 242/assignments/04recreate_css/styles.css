@@ -26,49 +26,126 @@ a {
 
 /* Header */
 .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 48px;
-    padding: 0 5.5%;
+    padding: 11px 2.6%;
     color: white;
-    background-color: var(--garnet);
-    font-size: 0.72rem;
+    background-color: black;
 }
 
-.usc {
-    font-weight: 700;
-    letter-spacing: 0.06em;
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-.utility-nav {
-    display: flex;
-    gap: 20px;
-}
-
 .site-header {
-    padding: 22px 5.5%;
-    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 115px;
+    padding: 20px 2.6%;
+    color: white;
+    background-color: black;
 }
 
-.site-name,
-.footer-title {
-    color: var(--garnet);
-    font: 700 2rem/1.1 'Playfair Display', Georgia, serif;
+.usc-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.usc-logo-box {
+    display: grid;
+    place-items: center;
+    width: 62px;
+    height: 62px;
+    color: white;
+    background-color: #73000a;
+    border: 1px solid white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.usc-brand p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.usc-brand strong {
+    font-size: 1.9rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.site-name {
+    color: white;
+    font: bold 2.5rem Georgia, serif;
 }
 
 .main-nav {
     display: flex;
-    justify-content: center;
-    gap: 46px;
-    padding: 14px 5.5%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 52px;
+    min-height: 63px;
+    padding: 0 7%;
     color: white;
-    background-color: var(--dark-garnet);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    background-color: #73000a;
+    font-size: 0.82rem;
+    font-weight: bold;
     text-transform: uppercase;
+}
+
+.main-nav a {
+    white-space: nowrap;
+}
+
+.main-nav span {
+    margin-left: 7px;
+    font-size: 1rem;
+}
+
+.menu-icon {
+    font-size: 5rem;
+}
+
+/* Small Screens */
+@media (max-width: 700px) {
+    .top-bar {
+        padding: 10px 18px;
+    }
+
+    .top-links {
+        gap: 8px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .site-header {
+        min-height: 90px;
+        padding: 16px 20px;
+    }
+
+    .usc-brand {
+        display: none;
+    }
+
+    .site-name {
+        font-size: 1.8rem;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+        gap: 25px;
+        min-height: 56px;
+        padding: 0 20px;
+        overflow-x: auto;
+    }
 }
 
 /* Hero */
@@ -279,128 +356,252 @@ h2 {
 }
 
 /* Footer */
-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    padding: 54px 8% 28px;
-    color: white;
-    background-color: #252525;
+.medicine-footer {
+    display: flex;
+    gap: 35px;
+    padding: 72px 5%;
+    color: #73000a;
+    background-color: #f3f3f3;
+}
+
+.medicine-brand {
+    flex: 1.5;
 }
 
 .footer-title {
+    display: block;
+    margin-bottom: 24px;
+    color: #73000a;
+    font: 700 1.5rem/1.1 Georgia, serif;
+}
+
+.social-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-row a:not(.medicine-button) {
+    color: #8a4b52;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.medicine-button {
+    padding: 11px 20px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    box-shadow: 0 1px 6px #777;
+    font-size: 0.72rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.medicine-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+    gap: 18px 45px;
+    padding: 4px 35px 0 20px;
+    border-left: 1px solid #aaa;
+    font-size: 0.82rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.medicine-links a,
+.medicine-footer address a {
+    color: #73000a;
+    text-decoration: underline;
+}
+
+.medicine-footer address {
+    min-width: 235px;
+    margin: 0;
+    padding-left: 20px;
+    border-left: 1px solid #aaa;
+    color: #111;
+    font-size: 0.87rem;
+    font-style: normal;
+}
+
+/* Garnet USC Footer */
+.university-footer {
+    padding: 38px 4.5% 58px;
+    background-color: #73000a;
+}
+
+.usc-footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.university-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     color: white;
 }
 
-.footer-title + p {
-    font-size: 0.83rem;
+.usc-logo {
+    display: grid;
+    place-items: center;
+    width: 76px;
+    height: 76px;
+    border: 1px solid white;
+    font-weight: bold;
 }
 
-.copyright {
-    grid-column: 1 / -1;
-    margin: 16px 0 0;
-    padding-top: 20px;
-    border-top: 1px solid #777;
-    font-size: 0.75rem;
-}
-
-footer nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: end;
-    flex-wrap: wrap;
-    gap: 14px 25px;
-    font-size: 0.78rem;
+.university-name p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+.university-name strong {
+    font-size: 2.4rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.usc-socials {
+    display: flex;
+    gap: 28px;
+}
+
+.usc-socials a {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 38px;
+}
+
+.directory-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.colleges {
+    flex: 1.65;
+}
+
+.offices {
+    flex: 1.1;
+}
+
+.tools {
+    flex: 0.5;
+}
+
+.link-columns {
+    display: flex;
+    gap: 35px;
+}
+
+.link-columns > div {
+    flex: 1;
+}
+
+.footer-columns h3 {
+    margin: 0 0 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 0.84rem;
+    text-transform: uppercase;
+}
+
+.footer-columns a {
+    display: table;
+    margin: 7px 0;
+    color: white;
+    font-size: 0.76rem;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.medicine-footer a:hover,
+.university-footer a:hover,
+.legal-footer a:hover {
+    background-color: #b21f35;
+}
+
+/* Black Bottom Footer */
+.legal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 13px 5%;
+    background-color: black;
+}
+
+.legal-footer a {
+    padding: 0 17px;
+    color: white;
+    border-right: 1px solid #aaa;
+    font-size: 0.68rem;
+    font-weight: bold;
+}
+
+.legal-footer a:first-child {
+    padding-left: 0;
+}
+
+.legal-footer a:last-child {
+    border-right: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 700px) {
-    .top-bar {
+    .medicine-footer,
+    .usc-footer-top,
+    .footer-columns,
+    .link-columns {
         flex-direction: column;
-        gap: 8px;
-        padding: 12px 20px;
     }
 
-    .utility-nav {
-        display: none;
+    .medicine-footer {
+        padding: 45px 28px;
     }
 
-    .site-header {
-        padding: 18px 20px;
+    .medicine-links,
+    .medicine-footer address {
+        padding-left: 0;
+        border-left: 0;
     }
 
-    .site-name {
-        font-size: 1.55rem;
+    .university-footer {
+        padding: 36px 28px 50px;
     }
 
-    .main-nav {
-        justify-content: flex-start;
+    .usc-footer-top {
+        align-items: flex-start;
         gap: 25px;
-        padding: 14px 20px;
-        overflow-x: auto;
-        white-space: nowrap;
+        margin-bottom: 35px;
     }
 
-    .hero {
-        min-height: 430px;
+    .legal-footer {
+        padding: 16px 28px;
     }
 
-    .hero-copy {
-        margin: 0 24px 50px;
-    }
-
-    .split-section {
-        flex-direction: column;
-    }
-
-    .split-section > * {
-        width: 100%;
-    }
-
-    .split-section img {
-        height: 300px;
-    }
-
-    .section-copy {
-        padding: 62px 28px;
-    }
-
-    .research img {
-        order: 0;
-    }
-
-    .quote {
-        padding: 68px 25px;
-    }
-
-    .quote blockquote {
-        font-size: 1.35rem;
-    }
-
-    .cards {
-        flex-direction: column;
-        margin: 60px auto;
-    }
-
-    .centers-copy {
-        margin: 0 28px;
-    }
-
-    .stay-connected {
-        padding: 62px 25px;
-    }
-
-    footer {
-        grid-template-columns: 1fr;
-        padding: 45px 28px 25px;
-    }
-
-    footer nav {
-        justify-content: flex-start;
-    }
-
-    .copyright {
-        grid-column: auto;
+    .legal-footer a {
+        margin: 5px 0;
+        padding: 0 12px;
     }
 }
