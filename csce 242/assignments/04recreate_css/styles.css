@@ -1,18 +1,407 @@
-:root { --garnet: #73000a; --dark-garnet: #4a0011; --gold: #f4c542; --ink: #1d1d1d; --slate: #233b4a; --cream: #f5f3f0; }
-* { box-sizing: border-box; }
-body { margin: 0; color: var(--ink); font-family: Montserrat, Arial, sans-serif; line-height: 1.65; }
-a { color: inherit; text-decoration: none; }
-.top-bar { min-height: 48px; background: var(--garnet); color: white; display: flex; align-items: center; justify-content: space-between; padding: 0 5.5%; font-size: .72rem; }
-.usc { font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }.utility-nav { display: flex; gap: 20px; }
-.site-header { padding: 22px 5.5%; background: white; }.site-name, .footer-title { font: 700 2rem/1.1 'Playfair Display', Georgia, serif; color: var(--garnet); }
-.main-nav { display: flex; justify-content: center; gap: 46px; padding: 14px 5.5%; background: var(--dark-garnet); color: white; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.hero { min-height: 570px; display: flex; align-items: end; background: linear-gradient(90deg, rgba(25, 15, 10, .75), rgba(25,15,10,.18)), url('https://placehold.co/1800x900/664d3a/ffffff?text=School+of+Medicine') center/cover; }
-.hero-copy { width: min(760px, 90%); margin: 0 0 74px 9%; color: white; }.hero h1, h2 { font: 700 clamp(2.4rem, 5vw, 4.5rem)/1.05 'Playfair Display', Georgia, serif; margin: 0 0 20px; }.hero p { max-width: 580px; font-size: 1.08rem; }
-.split-section { display: flex; min-height: 540px; }.split-section > * { width: 50%; }.split-section img { object-fit: cover; }.section-copy { padding: 92px max(8%, 72px); align-self: center; }.section-copy h2 { color: var(--garnet); }.section-copy p:not(.eyebrow) { max-width: 520px; }
-.eyebrow { margin: 0 0 12px; color: var(--garnet); font-size: .73rem; font-weight: 700; letter-spacing: .16em; }.button { display: inline-block; margin-top: 15px; padding: 12px 22px; background: var(--garnet); color: white; font-size: .78rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }.research { background: var(--cream); }.research img { order: 2; }
-.quote { background: var(--garnet); color: white; padding: 90px 9%; text-align: center; }.quote > div { max-width: 930px; margin: auto; }.quote-mark { display: block; font: 7rem/0.7 Georgia, serif; color: var(--gold); }.quote blockquote { margin: 22px 0; font: 600 1.65rem/1.5 'Playfair Display', Georgia, serif; }.quote p { color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
-.cards { display: flex; gap: 28px; max-width: 1260px; margin: 90px auto; padding: 0 28px; }.cards article { flex: 1; box-shadow: 0 3px 12px #0002; }.cards img { width: 100%; display: block; }.cards article div { padding: 25px; }.cards h3 { margin: 0; color: var(--garnet); font: 700 1.6rem 'Playfair Display', Georgia, serif; }.cards p { font-size: .88rem; }.cards article a { color: var(--garnet); font-size: .76rem; font-weight: 700; text-transform: uppercase; }
-.centers { min-height: 510px; display: flex; align-items: center; background: linear-gradient(90deg, rgba(15,40,54,.92), rgba(15,40,54,.55)), url('https://placehold.co/1800x850/1c536d/ffffff?text=Centers+and+Institutes') center/cover; color: white; }.centers-copy { max-width: 670px; margin-left: 9%; }.centers .eyebrow { color: var(--gold); }.centers h2 { color: white; }.light { background: white; color: var(--garnet); }
-.stay-connected { padding: 78px 5%; text-align: center; background: var(--cream); }.stay-connected h2 { color: var(--garnet); font-size: 3rem; }.stay-connected > div { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 28px; }.stay-connected a { padding: 13px 24px; border: 1px solid var(--garnet); color: var(--garnet); font-size: .78rem; font-weight: 700; text-transform: uppercase; }
-footer { background: #252525; color: white; padding: 54px 8% 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }.footer-title { color: white; }.footer-title + p { font-size: .83rem; }.copyright { grid-column: 1 / -1; margin: 16px 0 0; padding-top: 20px; border-top: 1px solid #777; font-size: .75rem; } footer nav { display: flex; align-items: flex-start; justify-content: end; flex-wrap: wrap; gap: 14px 25px; font-size: .78rem; text-transform: uppercase; }
-@media (max-width: 700px) { .top-bar { padding: 12px 20px; flex-direction: column; gap: 8px; }.utility-nav { display: none; }.site-header { padding: 18px 20px; }.site-name { font-size: 1.55rem; }.main-nav { display: flex; justify-content: flex-start; overflow-x: auto; white-space: nowrap; gap: 25px; padding: 14px 20px; }.hero { min-height: 430px; }.hero-copy { margin: 0 24px 50px; }.split-section { flex-direction: column; }.split-section > * { width: 100%; }.split-section img { height: 300px; }.section-copy { padding: 62px 28px; }.research img { order: 0; }.quote { padding: 68px 25px; }.quote blockquote { font-size: 1.35rem; }.cards { flex-direction: column; margin: 60px auto; }.centers-copy { margin: 0 28px; }.stay-connected { padding: 62px 25px; } footer { grid-template-columns: 1fr; padding: 45px 28px 25px; } footer nav { justify-content: flex-start; }.copyright { grid-column: auto; } }
+
+/* Colors */
+:root {
+    --garnet: #73000a;
+    --dark-garnet: #4a0011;
+    --gold: #f4c542;
+    --ink: #1d1d1d;
+    --cream: #f5f3f0;
+}
+
+/* Structure */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: Montserrat, Arial, sans-serif;
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 0 5.5%;
+    color: white;
+    background-color: var(--garnet);
+    font-size: 0.72rem;
+}
+
+.usc {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.utility-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.site-header {
+    padding: 22px 5.5%;
+    background-color: white;
+}
+
+.site-name,
+.footer-title {
+    color: var(--garnet);
+    font: 700 2rem/1.1 'Playfair Display', Georgia, serif;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+    padding: 14px 5.5%;
+    color: white;
+    background-color: var(--dark-garnet);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: end;
+    min-height: 570px;
+    background: linear-gradient(90deg, rgba(25, 15, 10, 0.75), rgba(25, 15, 10, 0.18)), url('https://placehold.co/1800x900/664d3a/ffffff?text=School+of+Medicine') center/cover;
+}
+
+.hero-copy {
+    width: min(760px, 90%);
+    margin: 0 0 74px 9%;
+    color: white;
+}
+
+.hero h1,
+h2 {
+    margin: 0 0 20px;
+    font: 700 clamp(2.4rem, 5vw, 4.5rem)/1.05 'Playfair Display', Georgia, serif;
+}
+
+.hero p {
+    max-width: 580px;
+    font-size: 1.08rem;
+}
+
+/* Education and Research */
+.split-section {
+    display: flex;
+    min-height: 540px;
+}
+
+.split-section > * {
+    width: 50%;
+}
+
+.split-section img {
+    object-fit: cover;
+}
+
+.section-copy {
+    align-self: center;
+    padding: 92px max(8%, 72px);
+}
+
+.section-copy h2 {
+    color: var(--garnet);
+}
+
+.section-copy p:not(.eyebrow) {
+    max-width: 520px;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--garnet);
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    color: white;
+    background-color: var(--garnet);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.research {
+    background-color: var(--cream);
+}
+
+.research img {
+    order: 2;
+}
+
+/* Quote */
+.quote {
+    padding: 90px 9%;
+    color: white;
+    background-color: var(--garnet);
+    text-align: center;
+}
+
+.quote > div {
+    max-width: 930px;
+    margin: auto;
+}
+
+.quote-mark {
+    display: block;
+    color: var(--gold);
+    font: 7rem/0.7 Georgia, serif;
+}
+
+.quote blockquote {
+    margin: 22px 0;
+    font: 600 1.65rem/1.5 'Playfair Display', Georgia, serif;
+}
+
+.quote p {
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 28px;
+    max-width: 1260px;
+    margin: 90px auto;
+    padding: 0 28px;
+}
+
+.cards article {
+    flex: 1;
+    box-shadow: 0 3px 12px #0002;
+}
+
+.cards img {
+    display: block;
+    width: 100%;
+}
+
+.cards article div {
+    padding: 25px;
+}
+
+.cards h3 {
+    margin: 0;
+    color: var(--garnet);
+    font: 700 1.6rem 'Playfair Display', Georgia, serif;
+}
+
+.cards p {
+    font-size: 0.88rem;
+}
+
+.cards article a {
+    color: var(--garnet);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Centers */
+.centers {
+    display: flex;
+    align-items: center;
+    min-height: 510px;
+    color: white;
+    background: linear-gradient(90deg, rgba(15, 40, 54, 0.92), rgba(15, 40, 54, 0.55)), url('https://placehold.co/1800x850/1c536d/ffffff?text=Centers+and+Institutes') center/cover;
+}
+
+.centers-copy {
+    max-width: 670px;
+    margin-left: 9%;
+}
+
+.centers .eyebrow {
+    color: var(--gold);
+}
+
+.centers h2 {
+    color: white;
+}
+
+.light {
+    color: var(--garnet);
+    background-color: white;
+}
+
+/* Stay Connected */
+.stay-connected {
+    padding: 78px 5%;
+    background-color: var(--cream);
+    text-align: center;
+}
+
+.stay-connected h2 {
+    color: var(--garnet);
+    font-size: 3rem;
+}
+
+.stay-connected > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.stay-connected a {
+    padding: 13px 24px;
+    color: var(--garnet);
+    border: 1px solid var(--garnet);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 54px 8% 28px;
+    color: white;
+    background-color: #252525;
+}
+
+.footer-title {
+    color: white;
+}
+
+.footer-title + p {
+    font-size: 0.83rem;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    margin: 16px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #777;
+    font-size: 0.75rem;
+}
+
+footer nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 14px 25px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 20px;
+    }
+
+    .utility-nav {
+        display: none;
+    }
+
+    .site-header {
+        padding: 18px 20px;
+    }
+
+    .site-name {
+        font-size: 1.55rem;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 14px 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero-copy {
+        margin: 0 24px 50px;
+    }
+
+    .split-section {
+        flex-direction: column;
+    }
+
+    .split-section > * {
+        width: 100%;
+    }
+
+    .split-section img {
+        height: 300px;
+    }
+
+    .section-copy {
+        padding: 62px 28px;
+    }
+
+    .research img {
+        order: 0;
+    }
+
+    .quote {
+        padding: 68px 25px;
+    }
+
+    .quote blockquote {
+        font-size: 1.35rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        margin: 60px auto;
+    }
+
+    .centers-copy {
+        margin: 0 28px;
+    }
+
+    .stay-connected {
+        padding: 62px 25px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 45px 28px 25px;
+    }
+
+    footer nav {
+        justify-content: flex-start;
+    }
+
+    .copyright {
+        grid-column: auto;
+    }
+}
