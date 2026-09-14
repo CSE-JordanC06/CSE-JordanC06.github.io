@@ -1,0 +1,137 @@
+:root {
+    --background: #eaf2f8;
+    --headings: #1f4e5f;
+    --cards-bg: #ffffff;
+    --cards-border: #7ba7b5;
+    --accent-text: #b24c63;
+    --light-text: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    padding: 0px;
+    margin: 0px;
+}
+
+#main-header {
+    background-color: var(--background);
+}
+
+#main-header h1 {
+    text-align: center;
+    padding: 20px 0 5px;
+    margin: 0;
+}
+
+h1, h2, h3, footer {
+    color: var(--headings);
+}
+
+#page-title {
+    color: var(--accent-text);
+    text-align: center;
+    margin: 12px 0 20px;
+    font-size: 1.7em;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 15px;
+}
+
+.project-card {
+    background: var(--cards-bg);
+    border: 2px solid var(--cards-border);
+    margin-bottom: 0;
+    min-height: 180px;
+    position: relative;
+}
+
+.project-card h3 {
+    margin: 0;
+    padding: 22px 16px;
+    text-align: center;
+}
+
+.beverage-choice {
+    text-align: center;
+    margin: 0;
+}
+
+#beverage-message {
+    padding: 0 12px;
+    color: var(--headings);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Speech bubble */
+.speech-bubble {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--light-text);
+    border: 2px solid var(--headings);
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px #a8a8a8;
+    color: var(--headings);
+    padding: 14px;
+}
+
+.speech-bubble::after {
+    position: absolute;
+    bottom: -12px;
+    left: 25px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: var(--light-text);
+    border-bottom: 2px solid var(--headings);
+    border-right: 2px solid var(--headings);
+    transform: rotate(45deg);
+}
+
+/* Sticker */
+.sun-container {
+    position: relative;
+    text-align: center;
+}
+
+#sun {
+    width: 130px;
+    cursor: pointer;
+}
+
+.sticker {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    font-size: 25px;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Desktop */
+@media (min-width: 1000px) {
+    #content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+        padding: 20px 0 15px;
+    }
+
+    .project-card {
+        min-height: 230px;
+    }
+}
