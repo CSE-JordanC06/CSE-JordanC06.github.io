@@ -86,3 +86,10 @@ setInterval(()=>{
     const hours = today.getHours();
     pDisplay.innerHTML = `${hours}:${minutes}:${seconds} ${month}/${day}/${year}`;
 }, 1000);
+
+
+
+//toggle nav
+document.getElementById("toggle-nav").onclick = () => {
+    document.querySelector("#main-nav ul").classList.toggle("hidden");
+}
