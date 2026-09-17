@@ -74,3 +74,16 @@ btnStop.onclick = () =>
     btnPause.disabled = true;
     btnStop.disabled = true;
 };
+
+
+
+//date display
+setInterval(()=>{
+    const pDisplay = document.getElementById("date-display");
+    const today = new Date();
+    const seconds = today.getSeconds();
+    const minutes = today.getMinutes();
+    const hours = today.getHours();
+    pDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
+
+}, 1000);
