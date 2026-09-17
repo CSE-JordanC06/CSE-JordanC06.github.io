@@ -14,8 +14,9 @@ document.getElementById("link").onclick = (e) => {
 document.getElementById("btn-bounce").onclick = (e) => {
     document.getElementById("ball").classList.toggle("bouncing-ball");
 }
+
 //when you change the number of days since you watered your plant
-//show a message and change the image.
+//show a message and change the image
 document.getElementById("txt-num-days").onkeyup = (e) => {
     const numDays = parseInt(e.target.value);
     const pMessage = document.getElementById("p-plant-msg");
@@ -32,10 +33,8 @@ document.getElementById("txt-num-days").onkeyup = (e) => {
         pMessage.innerHTML = `Oh no your plant is wilting it's been ${numDays} days.`;
     } else {
         pMessage.innerHTML = "Your plant is a gooner";
-        plantImage.src="https://dummyimage.com/150x150/8B4513/fff&text=Dead+Plant";
     }
 }
-
 
 //counting
 let countInterval;
@@ -50,7 +49,7 @@ btnStop.disabled = true;
 btnStart.onclick = () =>
 {
     countInterval = setInterval(()=>{
-    pCount.innerHTML = ++count;
+        pCount.innerHTML = ++count;
     },500);
     btnStart.disabled = true;
     btnPause.disabled = false;
@@ -62,28 +61,28 @@ btnPause.onclick = () =>
     clearInterval(countInterval);
     btnStart.disabled = false;
     btnPause.disabled = true;
-    btnStop.disabled = false;
+    btnStop.disabled = true;
 };
 
 btnStop.onclick = () =>
 {
-    clearInterval(countInterval);
-    count = 0;
+    count=0;
     pCount.innerHTML = "";
+    clearInterval(countInterval);
     btnStart.disabled = false;
     btnPause.disabled = true;
     btnStop.disabled = true;
 };
 
-
-
 //date display
 setInterval(()=>{
     const pDisplay = document.getElementById("date-display");
     const today = new Date();
+    const month = today.getMonth() + 1; //months are zero based
+    const day = today.getDate();
+    const year = today.getFullYear();
     const seconds = today.getSeconds();
     const minutes = today.getMinutes();
     const hours = today.getHours();
-    pDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
-
+    pDisplay.innerHTML = `${hours}:${minutes}:${seconds} ${month}/${day}/${year}`;
 }, 1000);
