@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 6</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <header id="main-header">
+                <h1>Assignment 6</h1>
+                <h2>If Statements</h2>
+
+                <button id="toggle-nav">▼</button>
+
+                <nav id="main-nav">
+                    <ul>
+                        <li>
+                            <a id="exercise-one-link" href="#">
+                                Exercise 1
+                            </a>
+                        </li>
+                        <li>
+                            <a id="exercise-two-link" href="#">
+                                Exercise 2
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <section id="exercise-one" class="exercise-card">
+                    <h3>Missing Class Point Deductions</h3>
+
+                    <p>
+                        <label for="days-missed">
+                            How many days do you intend to miss class?
+                        </label>
+                    </p>
+
+                    <input type="number" id="days-missed" min="0" max="25">
+
+                    <p id="deduction-result"></p>
+                    <p id="attendance-message"></p>
+                </section>
+
+                <section id="exercise-two" class="exercise-card hidden">
+                    <h3>End of Semester Counter</h3>
+
+                    <p id="days-left"></p>
+                    <p id="semester-message"></p>
+                </section>
+            </main>
+
+            <footer>
+                <p>@jordanc06.github.io</p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
