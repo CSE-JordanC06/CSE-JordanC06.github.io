@@ -1,0 +1,62 @@
+/* CSS road and car art created for this assignment. */
+
+body {
+    background:#7dc957;
+    margin:0;
+}
+
+#road {
+    background:#343434;
+    border-bottom:5px solid #ffffff;
+    border-top:5px solid #ffffff;
+    height:130px;
+    overflow:hidden;
+    position:relative;
+    top:68px;
+}
+
+.lane-divider {
+    background:repeating-linear-gradient(
+        to right,
+        #f9d941 0 50px,
+        transparent 50px 90px
+    );
+    height:6px;
+    position:absolute;
+    top:62px;
+    width:100%;
+}
+
+.car {
+    border-radius:10px 10px 5px 5px;
+    height:40px;
+    position:absolute;
+    width:90px;
+}
+
+.window {
+    background:#a8dcff;
+    border-radius:8px 8px 2px 2px;
+    height:18px;
+    left:23px;
+    position:absolute;
+    top:-12px;
+    width:44px;
+}
+
+.wheel {
+    background:#686868;
+    border-radius:50%;
+    bottom:-8px;
+    height:16px;
+    position:absolute;
+    width:16px;
+}
+
+.wheel-left {
+    left:10px;
+}
+
+.wheel-right {
+    right:10px;
+}
