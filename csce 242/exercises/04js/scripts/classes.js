@@ -14,6 +14,16 @@ class Dog {
 
         section.append(this.dogName());
         section.append(this.dogImage());
+
+        const moreInfo = this.moreInfo()
+        section.append(moreInfo);
+        moreInfo.classList.add("hidden");
+
+        section.querySelector("a").onclick = () => {
+            moreInfo.classList.toggle("hidden");
+        };
+        
+
         return section;
     }
 
@@ -36,6 +46,7 @@ class Dog {
 
     moreInfo(){
         const ul = document.createElement("ul");
+        ul.classList.add("more-info");
         ul.append(this.liInfo("Breed", this.breed));
         ul.append(this.liInfo("Size", this.size));
         ul.append(this.liInfo("Age", this.age));
@@ -45,7 +56,7 @@ class Dog {
 
     liInfo(property, value) {
         const li = document.createElement("li");
-        li.append(`<strong>${property}</strong>: ${value}`);
+        li.innerHTML= `<strong>${property}</strong>: ${value}`;
         return li;
     }
 }
