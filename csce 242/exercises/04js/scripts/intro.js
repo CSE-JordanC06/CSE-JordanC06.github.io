@@ -78,7 +78,7 @@ btnStop.onclick = () =>
 setInterval(()=>{
     const pDisplay = document.getElementById("date-display");
     const today = new Date();
-    const month = today.getMonth() + 1; //months are zero based
+    const month = today.getMonth() + 1;
     const day = today.getDate();
     const year = today.getFullYear();
     const seconds = today.getSeconds();
@@ -87,15 +87,12 @@ setInterval(()=>{
     pDisplay.innerHTML = `${hours}:${minutes}:${seconds} ${month}/${day}/${year}`;
 }, 1000);
 
-
-
-//toggle nav
-document.getElementById("toggle-nav").onclick = () => {
+//toggle the navigation
+document.querySelector("#toggle-nav").onclick = () => {
     document.querySelector("#main-nav ul").classList.toggle("hide-small");
 }
 
-
-//record the users donations and fill up the thermometer apporiately
+//record the users donation and fill up the thermometer appropriately
 const GOAL = 10000;
 document.getElementById("goal").innerHTML = GOAL;
 
@@ -105,6 +102,6 @@ document.getElementById("btn-donation").onclick = () => {
     percent = userDonation / GOAL * 100;
     
     donationP.innerHTML = `You are ${percent.toFixed(1)}% to your goal`;
-    document.querySelector(":root").style.setProperty("--donation", `${percent}%`);
+    document.querySelector(":root").style.setProperty("--donation", percent + "%");
 
 }
