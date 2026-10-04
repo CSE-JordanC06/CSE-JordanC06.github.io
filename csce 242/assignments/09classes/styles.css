@@ -1,0 +1,170 @@
+/* Structure */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f5f1e9;
+    color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    width: 95%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* Header and Footer */
+
+#main-header,
+#main-footer {
+    text-align: center;
+}
+
+#main-header h1 {
+    margin: 15px 0;
+    color: #73000a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+}
+
+#main-header h2 {
+    margin: 15px 0 25px;
+    color: #65554b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+#main-footer {
+    padding: 12px;
+    color: #73000a;
+}
+
+/* Vacation Gallery */
+
+#vacation-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.vacation {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #73000a;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px 8px #00000020;
+}
+
+.vacation:hover {
+    background: #520008;
+}
+
+.vacation:focus-visible {
+    outline: 3px solid #252525;
+    outline-offset: 4px;
+}
+
+.vacation h3 {
+    margin: 12px 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.vacation p {
+    margin: 15px 0;
+}
+
+.vacation img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Modal */
+
+#vacation-modal {
+    background: #00000080;
+}
+
+#vacation-modal .w3-modal-content {
+    position: relative;
+    width: 92%;
+    max-width: 900px;
+    padding: 24px;
+    background: #f5e8dc;
+    color: #520008;
+    border-radius: 8px;
+}
+
+#close-modal {
+    z-index: 1;
+    color: #73000a;
+    font-size: 25px;
+}
+
+#modal-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 22px;
+}
+
+#vacation-map {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+#vacation-details {
+    min-width: 0;
+}
+
+#vacation-details h2 {
+    margin: 0 0 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+#vacation-details p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+/* Medium Screens */
+
+@media only screen and (min-width: 600px) {
+    .vacation {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+/* Large Screens */
+
+@media only screen and (min-width: 900px) {
+    .vacation {
+        width: calc((100% - 60px) / 4);
+    }
+
+    #modal-layout {
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    #vacation-map {
+        width: 50%;
+        height: 400px;
+    }
+
+    #vacation-details {
+        flex: 1;
+        padding: 10px 12px 0 0;
+    }
+}
