@@ -126,6 +126,15 @@ body {
     margin: 0;
 }
 
+.card a {
+    color: #73000a;
+    font-weight: bold;
+    margin-right: 14px;
+}
+
+.card a:hover {
+    color: #000000;
+}
 /* Responsive Design */
 @media (max-width: 700px) {
     #content {
